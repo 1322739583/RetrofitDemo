@@ -7,9 +7,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.retrofitdemo.rest.RepoService;
-import com.example.retrofitdemo.rest.module.AddUserResponse;
-import com.example.retrofitdemo.rest.module.Issue;
+import com.example.retrofitdemo.mvp.ui.repo.ReposActivity;
+import com.example.retrofitdemo.mvp.api.RepoService;
+import com.example.retrofitdemo.mvp.module.response.AddUserResponse;
+import com.example.retrofitdemo.mvp.module.Issue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnGetRepos)
     public void btnGetRepos() {
-         intent.setClass(MainActivity.this,ReposActivity.class);
+         intent.setClass(MainActivity.this, ReposActivity.class);
           startActivity(intent);
 
     }

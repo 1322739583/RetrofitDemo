@@ -1,6 +1,5 @@
 package com.example.retrofitdemo.adapter;
 
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -9,8 +8,7 @@ import androidx.annotation.Nullable;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.retrofitdemo.R;
-import com.example.retrofitdemo.rest.module.Repo;
-import com.example.retrofitdemo.rest.module.User;
+import com.example.retrofitdemo.mvp.module.Repo;
 
 
 import java.util.List;
