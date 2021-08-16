@@ -35,7 +35,7 @@ public class ServiceGenerator {
                     Request original = chain.request();
 
                     Request.Builder requestBuilder = original.newBuilder()
-
+                            //不要提交令牌到github,令牌会失效
                             .addHeader("Authorization", "token "+"fc2295058bf796dc65365f94f59d15f131dc691f")
                       //      .header("Accept", "application/json")
                             .method(original.method(), original.body());
