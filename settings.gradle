@@ -1,0 +1,4 @@
+rootProject.name='RetrofitDemo'
+include ':app'
+include ':base'
+include ':location'
