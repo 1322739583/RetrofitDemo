@@ -6,11 +6,12 @@ import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 
 import com.example.retrofitdemo.mvp.ui.repo.ReposActivity;
-import com.example.retrofitdemo.mvp.api.RepoService;
-import com.example.retrofitdemo.mvp.module.response.AddUserResponse;
-import com.example.retrofitdemo.mvp.module.Issue;
+import com.example.retrofitdemo.api.RepoService;
+import com.example.retrofitdemo.mvp.model.response.AddUserResponse;
+import com.example.retrofitdemo.mvp.model.Issue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import hugo.weaving.DebugLog;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-
+@DebugLog
 public class MainActivity extends AppCompatActivity {
 
 
@@ -36,12 +38,14 @@ public class MainActivity extends AppCompatActivity {
     Button btn5;
 
    Intent intent=new Intent();
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        getData("www.baidu.com");
     }
 
     @OnClick(R.id.btnGetRepos)
@@ -69,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
                          Log.d("MainActivity", "addUserResponse:" + addUserResponse);
                      }
                  });
+    }
+
+    public String getData(String url){
+        return "this is data";
     }
 
     @OnClick(R.id.btn3)

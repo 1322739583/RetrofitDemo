@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofitdemo.R;
 import com.example.retrofitdemo.adapter.UserAdapter;
-import com.example.retrofitdemo.mvp.module.User;
+import com.example.retrofitdemo.mvp.model.User;
 
 import java.util.List;
 

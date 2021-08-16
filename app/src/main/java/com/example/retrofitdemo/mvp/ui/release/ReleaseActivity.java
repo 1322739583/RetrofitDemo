@@ -10,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.retrofitdemo.R;
 import com.example.retrofitdemo.ServiceGenerator;
 import com.example.retrofitdemo.SimpleObserver;
-import com.example.retrofitdemo.mvp.api.RepoService;
-import com.example.retrofitdemo.mvp.module.AddRelease;
-import com.example.retrofitdemo.mvp.module.Release;
-import com.example.retrofitdemo.mvp.module.response.AddReleaseResponse;
-import com.example.retrofitdemo.mvp.module.response.AssertResponse;
+import com.example.retrofitdemo.api.RepoService;
+import com.example.retrofitdemo.mvp.model.AddRelease;
+import com.example.retrofitdemo.mvp.model.Release;
+import com.example.retrofitdemo.mvp.model.response.AddReleaseResponse;
+import com.example.retrofitdemo.mvp.model.response.AssertResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

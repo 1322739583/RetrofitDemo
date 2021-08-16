@@ -1,4 +1,4 @@
-package com.example.retrofitdemo.mvp.module;
+package com.example.retrofitdemo.mvp.model;
 
 public class Issue {
 

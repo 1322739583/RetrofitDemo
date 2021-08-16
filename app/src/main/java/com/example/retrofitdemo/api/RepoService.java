@@ -1,12 +1,12 @@
-package com.example.retrofitdemo.mvp.api;
+package com.example.retrofitdemo.api;
 
-import com.example.retrofitdemo.mvp.module.AddRelease;
-import com.example.retrofitdemo.mvp.module.response.AddReleaseResponse;
-import com.example.retrofitdemo.mvp.module.response.AddUserResponse;
-import com.example.retrofitdemo.mvp.module.Issue;
-import com.example.retrofitdemo.mvp.module.Release;
-import com.example.retrofitdemo.mvp.module.Repo;
-import com.example.retrofitdemo.mvp.module.response.AssertResponse;
+import com.example.retrofitdemo.mvp.model.AddRelease;
+import com.example.retrofitdemo.mvp.model.response.AddReleaseResponse;
+import com.example.retrofitdemo.mvp.model.response.AddUserResponse;
+import com.example.retrofitdemo.mvp.model.Issue;
+import com.example.retrofitdemo.mvp.model.Release;
+import com.example.retrofitdemo.mvp.model.Repo;
+import com.example.retrofitdemo.mvp.model.response.AssertResponse;
 
 import java.util.List;
 
@@ -21,6 +21,7 @@ public interface RepoService {
 
     @GET("/users/{user}/repos")
     Observable<List<Repo>> getRepos(@Path("user") String user);
+
 
     @GET("/users/{user}/repos")
     Observable<List<Repo>> getReposByPage(@Path("user") String user, @Query("page") int page, @Query("per_page") int perPage);

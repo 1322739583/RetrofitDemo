@@ -1,4 +1,4 @@
-package com.example.retrofitdemo.mvp.module;
+package com.example.retrofitdemo.mvp.model;
 
 import java.util.List;
 

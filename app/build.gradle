@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.hugo'
 
 android {
     signingConfigs {
@@ -12,6 +13,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.1"
 
+
     defaultConfig {
         applicationId "com.example.retrofitdemo"
         minSdkVersion 16
@@ -20,6 +22,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
 
@@ -28,7 +32,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+
     buildTypes {
+
+
         release {
             minifyEnabled true
             // Zipalign优化
@@ -39,11 +46,11 @@ android {
 
             android.applicationVariants.all { variant ->
                 variant.outputs.all { output ->
-                //    def outputFile = output.outputFile
+                    //    def outputFile = output.outputFile
 //                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为appname-1.0-beta1-xxxx-xx-xx.apk
-                     //   def fileName = "app-${defaultConfig.versionName}-beta1-${releaseTime()}.apk"
-                        outputFileName=  "app-${defaultConfig.versionName}-beta1-${releaseTime()}.apk"
+                    // 输出apk名称为appname-1.0-beta1-xxxx-xx-xx.apk
+                    //   def fileName = "app-${defaultConfig.versionName}-beta1-${releaseTime()}.apk"
+                    outputFileName = "app-${defaultConfig.versionName}-beta1-${releaseTime()}.apk"
 //                    }
                 }
             }
@@ -92,6 +99,12 @@ dependencies {
 // if u use AndroidX, use the following
     implementation 'com.blankj:utilcodex:1.29.0'
     implementation project(path: ':location')
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }
 

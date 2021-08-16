@@ -7,20 +7,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.retrofitdemo.R;
 import com.example.retrofitdemo.ServiceGenerator;
 import com.example.retrofitdemo.SimpleObserver;
 import com.example.retrofitdemo.adapter.LoginAdapter;
-import com.example.retrofitdemo.mvp.api.RepoService;
-import com.example.retrofitdemo.mvp.module.Repo;
+import com.example.retrofitdemo.api.RepoService;
+import com.example.retrofitdemo.mvp.model.Repo;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hugo.weaving.DebugLog;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 public class ReposActivity extends AppCompatActivity {
@@ -51,6 +50,7 @@ public class ReposActivity extends AppCompatActivity {
 
     }
 
+    @DebugLog
     private void getReposByPage() {
         ServiceGenerator.createService(RepoService.class)
                 .getReposByPage("1322739583",2,10)

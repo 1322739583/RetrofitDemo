@@ -1,4 +1,4 @@
-package com.example.retrofitdemo.mvp.module.response;
+package com.example.retrofitdemo.mvp.model.response;
 
 import com.google.gson.annotations.SerializedName;
 

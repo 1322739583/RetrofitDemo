@@ -1,4 +1,4 @@
-package com.example.retrofitdemo.mvp.module.param;
+package com.example.retrofitdemo.mvp.model.param;
 
 public class UploadAssertParam {
     private String name;
